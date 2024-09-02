@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Energy Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to Smart Energy Management</h1>
+        <p>Monitor and optimize your home's energy consumption</p>
+        <button id="toggle-mode">Switch to Dark Mode</button>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <ul>
+            <li><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#tips">Energy Saving Tips</a></li>
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="#support">Support</a></li>
+            <li><a href="#login">Login</a></li>
+        </ul>
+    </nav>
+
+    <!-- Login Section -->
+    <section id="login">
+        <h2>Login</h2>
+        <form id="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a href="#register">Register here</a></p>
+    </section>
+
+    <!-- Register Section -->
+    <section id="register">
+        <h2>Register</h2>
+        <form id="register-form">
+            <label for="reg-username">Username:</label>
+            <input type="text" id="reg-username" name="username" required>
+            <label for="reg-email">Email:</label>
+            <input type="email" id="reg-email" name="email" required>
+            <label for="reg-password">Password:</label>
+            <input type="password" id="reg-password" name="password" required>
+            <button type="submit">Register</button>
+        </form>
+        <p>Already have an account? <a href="#login">Login here</a></p>
+    </section>
+
+    <!-- Dashboard Section -->
+    <section id="dashboard">
+        <h2>Your Energy Dashboard</h2>
+        <canvas id="energyChart"></canvas>
+        <div class="device">
+            <h3>Device 1</h3>
+            <p>Current Consumption: <span id="device1-consumption">10 kWh</span></p>
+            <button onclick="updateConsumption('device1-consumption')">Update</button>
+        </div>
+        <div class="device">
+            <h3>Device 2</h3>
+            <p>Current Consumption: <span id="device2-consumption">15 kWh</span></p>
+            <button onclick="updateConsumption('device2-consumption')">Update</button>
+        </div>
+        <!-- Add Device Section -->
+        <section id="add-device">
+            <h2>Add New Device</h2>
+            <form id="add-device-form">
+                <label for="device-name">Device Name:</label>
+                <input type="text" id="device-name" name="device-name" required>
+                <label for="device-type">Device Type:</label>
+                <input type="text" id="device-type" name="device-type" required>
+                <button type="submit">Add Device</button>
+            </form>
+        </section>
+        <!-- Energy Consumption History -->
+        <section id="history">
+            <h2>Energy Consumption History</h2>
+            <canvas id="historyChart"></canvas>
+        </section>
+    </section>
+
+    <!-- Energy Saving Tips Section -->
+    <section id="tips">
+        <h2>Energy Saving Tips</h2>
+        <ul>
+            <li>Turn off devices when not in use.</li>
+            <li>Use energy-efficient appliances.</li>
+            <li>Optimize your thermostat settings.</li>
+            <li>Use LED lighting instead of incandescent bulbs.</li>
+            <li>Unplug chargers when not in use.</li>
+            <li>Install smart power strips to reduce standby power.</li>
+            <li>Consider using solar panels for renewable energy.</li>
+        </ul>
+    </section>
+
+    <!-- Profile Section -->
+    <section id="profile">
+        <h2>User Profile</h2>
+        <p><strong>Username:</strong> <span id="profile-username">JohnDoe</span></p>
+        <p><strong>Email:</strong> <span id="profile-email">john.doe@example.com</span></p>
+        <h3>Connected Devices</h3>
+        <ul>
+            <li>Smart Thermostat</li>
+            <li>Energy Monitor</li>
+            <li>Smart Light Bulbs</li>
+        </ul>
+        <h3>Energy Consumption Report</h3>
+        <canvas id="profileChart"></canvas>
+    </section>
+
+    <!-- Support Section -->
+    <section id="support">
+        <h2>Need Help?</h2>
+        <p>Check our <a href="#">FAQ</a> or contact our <a href="#">support team</a>.</p>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Smart Energy Management. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
